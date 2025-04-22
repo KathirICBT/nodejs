@@ -1,4 +1,5 @@
 import express from "express";
+import studentRoutes from "./routes/students.route.js";
 
 const app = express();
 
@@ -8,14 +9,8 @@ app.get("/", (req, res) => {
 
 // CRUD FUNCTIONALITY
 
-// FOR READING
-app.get("/students", (req, res) => {});
-// FOR CREATE
-app.post("/students", (req, res) => {});
-// FOR UPDATE
-app.put("/students/:id", (req, res) => {});
-// FOR DELETE
-app.delete("/students/:id", (req, res) => {});
+// MIDDLEWARES
+app.use("/students", studentRoutes);
 
 const PORT = 3000;
 
