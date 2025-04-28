@@ -5,6 +5,10 @@ import db_con from "./lib/db.js";
 const app = express();
 const PORT = 3000;
 
+// Data middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // DB CONNECTION =============
 db_con();
 

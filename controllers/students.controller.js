@@ -3,7 +3,10 @@ export const StudentIndex = (req, res) => {
 };
 
 export const StudentCreate = (req, res) => {
-  res.send("Add a new student");
+  // create the student info
+  console.log(req.body);
+
+  return res.json(req.body);
 };
 
 export const StudentUpdate = (req, res) => {
